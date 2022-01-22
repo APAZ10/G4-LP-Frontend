@@ -1,0 +1,30 @@
+<div class="wrapper">
+    <div class="page-header page-header-small">
+        <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/soccer-bg2.jpg');">
+        </div>
+        <div class="container">
+            <div class="content-center">
+                <img class="n-logo" src="assets/img/now-logo.png" alt="">
+                <h1>Forest Lover</h1>
+                <h3>Con la mente en el bosque</h3>
+            </div>
+        </div>
+    </div>
+    <div> 
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-6">
+                <app-header [bosque]="bosque" *ngIf="bosque"></app-header>
+            </div>
+            <div class="col-12 col-sm-6">
+                <app-map [bosque]="bosque" *ngIf="bosque"></app-map>
+            </div>
+        </div>
+        <!--<app-gallery></app-gallery>-->
+    </div>
+    <footer class="bg-light text-center text-lg-start">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2021 Copyright:
+          <a class="text-dark" href="/inicio">Forest Lover</a>
+        </div>
+    </footer>
+</div>
