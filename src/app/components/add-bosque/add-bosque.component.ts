@@ -12,13 +12,11 @@ export class AddBosqueComponent implements OnInit {
   constructor(private bosqueService: BosquesService) { }
 
   addBosque(bosque) {
-    console.log(bosque)
-
-    /*
-    this.bosqueService.sendMessage(form).subscribe(() => {
+    
+    this.bosqueService.add(bosque).subscribe(() => {
       location.reload();
     });
-    */
+
   }
 
   ngOnInit() {
