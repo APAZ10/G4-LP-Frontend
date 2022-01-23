@@ -13,89 +13,93 @@
     
     <div class="section section-contact-us text-center">
         <div class="container">
+
           <form (ngSubmit)="addBosque(form.value)" #form="ngForm"> 
             <h2 class="title">Agrega un Bosque</h2>
             <p class="description">Comparte un bosque con el resto de personas</p>
+
             <div class="row justify-content-center">
               <div class="col-md-1 align-text">
                 <h6>Nombre: </h6>
               </div>
               <div class="col-md-8">
                 <div class="form-group">
-                  <input type="text" name="Nombre" value="" placeholder="Nombre" class="form-control" ngModel/>
+                  <input type="text" name="nombre" value="" placeholder="Nombre" class="form-control" ngModel/>
                 </div>
               </div>
             </div>
+
             <div class="row justify-content-center">
               <div class="col-md-1 align-text">
-                <h6>Género: </h6>
+                <h6>Zona: </h6>
               </div>
               <div class="col-md-8">
                 <div class="form-group">
-                  <select name="Genero" id="genero" class="form-control" ngModel>
+                  <select name="zona" id="zona" class="form-control" ngModel>
                     <option value=""></option>
-                    <option value="Masculino">Masculino</option>
-                    <option value="Femenino">Femenino</option>
-                    <option value="Otro">Otro</option>
+                    <option value="Norte">Norte</option>
+                    <option value="Sur">Sur</option>
+                    <option value="Centro">Centro</option>
                   </select>
                 </div>
               </div>
             </div>
+
             <div class="row justify-content-center">
               <div class="col-md-1 align-text">
-                <h6>Orígen: </h6>
+                <h6>URL de Imagen: </h6>
               </div>
               <div class="col-md-8">
                 <div class="form-group">
-                  <select name="Origen" id="origen" class="form-control" ngModel>
-                    <option value=""></option>
-                    <option value="Guayaquil">Guayaquil</option>
-                    <option value="Quito">Quito</option>
-                    <option value="Cuenca">Cuenca</option>
-                  </select>
+                    <input type="text" name="img_url" value="" placeholder="Nombre" class="form-control" ngModel/>
                 </div>
               </div>
             </div>
+
             <div class="row justify-content-center">
               <div class="col-md-1 align-text">
-                <h6>Fec.nac.: </h6>
+                <h6>Coordenadas: </h6>
               </div>
               <div class="col-md-8">
                 <div class="form-group">
-                  <input type="date" name="Fecha" value="" placeholder="Fecha de nacimiento" class="form-control" ngModel/>
+                  <input type="text" name="coords" value="" placeholder="Latitud,Longitud" class="form-control" ngModel/>
                 </div>
               </div>
             </div>
+
             <div class="row justify-content-center">
               <div class="col-md-1 align-text">
-                <h6>Celular: </h6>
+                <h6>Descripción: </h6>
               </div>
               <div class="col-md-8">
                 <div class="form-group">
-                  <input type="tel" name="Celular" value="" placeholder="Celular" class="form-control" ngModel/>
+                  <input type="text" name="descripcion" value="" placeholder="Descripción" class="form-control" ngModel/>
                 </div>
               </div>
             </div>
+
             <div class="row justify-content-center">
               <div class="col-md-1 align-text">
-                <h6>Correo: </h6>
+                <h6>Dirección: </h6>
               </div>
               <div class="col-md-8">
                 <div class="form-group">
-                  <input type="text" name="Correo" value="" placeholder="Correo" class="form-control" ngModel/>
+                  <input type="text" name="direccion" value="" placeholder="Dirección" class="form-control" ngModel/>
                 </div>
               </div>
             </div>
+
             <div class="row justify-content-center">
               <div class="col-md-1 align-text">
-                <h6>Detalles: </h6>
+                <h6>Precio: </h6>
               </div>
               <div class="col-md-8">
                 <div class="form-group">
-                  <textarea name="Detalles" class="form-control area-borders" rows="4" cols="80" placeholder="Escribe el mensaje..." ngModel></textarea>
+                    <input type="text" name="precio" value="" placeholder="Ej: 3$ la entrada por persona" class="form-control" ngModel/>
                 </div>
               </div>
             </div>
+            
             <button type="submit" class="btn btn-primary btn-enviar" id="btnEnviar">Enviar</button>
           </form>
         </div>
