@@ -21,13 +21,15 @@ export class BosquesService {
     return this.http.get<Bosque>(`${environment.datababe_url}/bosques/${id}`);
   }
 
+
+  add(bosque: Bosque): Observable<Bosque> {
+    return this.http.post<Bosque>(`${environment.datababe_url}/bosques`, bosque);
+  }
+
   /*delete(id: string): Observable<Bosque> {
     return this.http.delete<Bosque>(`${environment.datababe_url}/bosques/${id}`);
   }
 
-  add(bosque: Bosque): Observable<Bosque> {
-    return this.http.post<Bosque>(`${environment.datababe_url}/bosques/add`, bosque);
-  }
 
   update(bosque: Bosque) {
     return this.http.patch(`${environment.datababe_url}/bosques/${bosque.id}`, bosque);

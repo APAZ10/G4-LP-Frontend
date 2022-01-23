@@ -12,6 +12,7 @@ import { ClienteLayoutComponent } from './layouts/cliente-layout/cliente-layout.
 import { BosqueComponent } from './modules/bosque/bosque.component';
 
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { AddBosqueComponent } from './components/add-bosque/add-bosque.component';
 
 
 const routes: Routes =[
@@ -35,6 +36,9 @@ const routes: Routes =[
             {
                 path: 'noticias',
                 component: NoticiasComponent
+            },{
+                path: 'addBosque',
+                component: AddBosqueComponent
             },
             {
                 path: 'bosques/:id',

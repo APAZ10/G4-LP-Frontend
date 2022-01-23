@@ -1,6 +1,6 @@
 <div class="wrapper">
     <div class="page-header page-header-small">
-        <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/forest2.png');">
+        <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/forest.jpg');">
         </div>
         <div class="container">
             <div class="content-center">
@@ -10,11 +10,12 @@
             </div>
         </div>
     </div>
+    
     <div class="section section-contact-us text-center">
         <div class="container">
-          <form (ngSubmit)="contactForm(form.value)" #form="ngForm"> 
-            <h2 class="title">¿Tienes alguna duda?</h2>
-            <p class="description">Déjanos un mensaje y te contestaremos lo más pronto posible</p>
+          <form (ngSubmit)="addBosque(form.value)" #form="ngForm"> 
+            <h2 class="title">Agrega un Bosque</h2>
+            <p class="description">Comparte un bosque con el resto de personas</p>
             <div class="row justify-content-center">
               <div class="col-md-1 align-text">
                 <h6>Nombre: </h6>
@@ -100,11 +101,10 @@
         </div>
     </div>
     
-    
     <footer class="bg-light text-center text-lg-start">
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2020 Copyright:
-        <a class="text-dark" href="/inicio">ForestLover</a>
+        © 2021 Copyright:
+        <a class="text-dark" href="/inicio">Forest Lover</a>
       </div>
   </footer>
 </div>

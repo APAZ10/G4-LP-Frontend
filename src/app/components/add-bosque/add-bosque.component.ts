@@ -1,19 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { MessageService } from 'app/services/message/message.service';
+import { Bosque } from 'app/interfaces/bosques';
+import { BosquesService } from 'app/services/bosques/bosques.service';
 
 @Component({
-  selector: 'app-contacto',
-  templateUrl: './contacto.component.html',
-  styleUrls: ['./contacto.component.css']
+  selector: 'app-add-bosque',
+  templateUrl: './add-bosque.component.html',
+  styleUrls: ['./add-bosque.component.css']
 })
-export class ContactoComponent implements OnInit {
+export class AddBosqueComponent implements OnInit {
 
-  constructor(public _MessageService: MessageService) { }
+  constructor(private bosqueService: BosquesService) { }
 
-  contactForm(form) {
-    this._MessageService.sendMessage(form).subscribe(() => {
+  addBosque(bosque) {
+    console.log(bosque)
+
+    /*
+    this.bosqueService.sendMessage(form).subscribe(() => {
       location.reload();
     });
+    */
   }
 
   ngOnInit() {
@@ -23,8 +28,8 @@ export class ContactoComponent implements OnInit {
     navbar.classList.add('navbar-transparent');
 
   }
-
-  ngOnDestroy() {
+  
+  ngOnDestroy(){
     var body = document.getElementsByTagName('body')[0];
     body.classList.remove('landing-page');
     var navbar = document.getElementsByTagName('nav')[0];

@@ -4,4 +4,7 @@ export interface Bosque {
     zona: string;
     img_url: string;
     coords: string;
+    descripcion: string;
+    direccion: string;
+    precio: string;
 }

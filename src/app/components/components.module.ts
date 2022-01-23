@@ -12,6 +12,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { EquipoComponent } from './equipo/equipo.component';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AddBosqueComponent } from './add-bosque/add-bosque.component';
 
 @NgModule({
     imports: [
@@ -28,7 +29,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
         ContactoComponent,
         EquipoComponent,
         NoticiasComponent,
-        PageNotFoundComponent
+        PageNotFoundComponent,
+        AddBosqueComponent
     ],
     exports:[ ComponentsComponent ]
 })
