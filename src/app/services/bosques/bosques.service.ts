@@ -26,6 +26,10 @@ export class BosquesService {
     return this.http.post<Bosque>(`${environment.datababe_url}/bosques`, bosque);
   }
 
+  like(id: string): Observable<Bosque> {
+    return this.http.get<Bosque>(`${environment.datababe_url}/like/${id}`);
+  }
+
   /*delete(id: string): Observable<Bosque> {
     return this.http.delete<Bosque>(`${environment.datababe_url}/bosques/${id}`);
   }
