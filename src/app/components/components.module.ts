@@ -8,9 +8,9 @@ import { RouterModule } from '@angular/router';
 
 import { ComponentsComponent } from './components.component';
 import { InicioComponent } from './inicio/inicio.component';
-//import { ContactoComponent } from './contacto/contacto.component';
-//import { EquipoComponent } from './equipo/equipo.component';
-//import { NoticiasComponent } from './noticias/noticias.component';
+import { ContactoComponent } from './contacto/contacto.component';
+import { EquipoComponent } from './equipo/equipo.component';
+import { NoticiasComponent } from './noticias/noticias.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
@@ -25,9 +25,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     declarations: [
         ComponentsComponent,
         InicioComponent,
-        //ContactoComponent,
-        //EquipoComponent,
-        //NoticiasComponent,
+        ContactoComponent,
+        EquipoComponent,
+        NoticiasComponent,
         PageNotFoundComponent
     ],
     exports:[ ComponentsComponent ]
