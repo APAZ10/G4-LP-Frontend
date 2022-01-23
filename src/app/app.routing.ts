@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 //import { ContactoComponent } from './components/contacto/contacto.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 //import { EquipoComponent } from './components/equipo/equipo.component';
-//import { NoticiasComponent } from './components/noticias/noticias.component';
+import { NoticiasComponent } from './components/noticias/noticias.component';
 import { ClienteLayoutComponent } from './layouts/cliente-layout/cliente-layout.component';
 
 import { BosqueComponent } from './modules/bosque/bosque.component';
@@ -25,29 +25,21 @@ const routes: Routes =[
                 component: InicioComponent
             },
             /*{
-                path: 'perfil',
-                component: ProfileComponent
-            },
-            {
                 path: 'contacto',
                 component: ContactoComponent
             },
             {
                 path: 'equipo',
                 component: EquipoComponent
-            },
+            },*/
             {
                 path: 'noticias',
                 component: NoticiasComponent
             },
-            {
-                path: 'login',
-                component: LoginComponent
-            },*/
-            {
+            /*{
                 path: 'bosques/:id',
                 component: BosqueComponent
-            }
+            }*/
         ]
     },
     {
