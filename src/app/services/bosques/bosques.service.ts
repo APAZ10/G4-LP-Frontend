@@ -30,6 +30,10 @@ export class BosquesService {
     return this.http.get<Bosque>(`${environment.datababe_url}/like/${id}`);
   }
 
+  addLike(id: string,cantidad: number): Observable<any>{
+    return this.http.patch(`${environment.datababe_url}/like/${id}`,{"cantidad":cantidad})
+  }
+
   /*delete(id: string): Observable<Bosque> {
     return this.http.delete<Bosque>(`${environment.datababe_url}/bosques/${id}`);
   }
