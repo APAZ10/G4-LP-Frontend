@@ -1,5 +1,9 @@
-<ngb-carousel id="especies">
-    <ng-template *ngFor="let especie of especies" ngbSlide>
-            <img class="d-block" src="{{especie.img_url}}" alt="">
-    </ng-template>
-</ngb-carousel>
+<div class="row justify-content-center">
+    <div class="col-12">
+        <ngb-carousel id="especies" style="display: block;width: 600px;height: 400px;">
+            <ng-template *ngFor="let especie of especies" ngbSlide>
+                    <img class="d-block" src="{{especie.img_url}}" alt="">
+            </ng-template>
+        </ngb-carousel>
+    </div>
+</div>
