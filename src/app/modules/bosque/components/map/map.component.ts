@@ -68,13 +68,15 @@ export class MapComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
   }
-
+y
   ngAfterViewInit(): void {
     // this.initMap();
     this.initData();
   }
 
   private initData(): void {
+    console.log(this.bosque)
+    console.log(this.bosque.likes)
     const lon = this.bosque.coords.split(',')[0];
     const lat = this.bosque.coords.split(',')[1];
     this.map = L.map('map', {

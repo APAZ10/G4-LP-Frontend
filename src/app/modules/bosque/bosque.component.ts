@@ -51,6 +51,10 @@ export class BosqueComponent implements OnInit, OnDestroy {
                 //await this.fetchLikes(bosque);
                 console.log(bosque)
                 this.bosque = bosque["data"];
+                this.bosqueService.like(bosqueId).subscribe(async like=>{
+                    this.bosque["likes"]=like["data"][0]["cantidad"]
+                });
+                console.log(bosque)
                 resolve();
             });
         });

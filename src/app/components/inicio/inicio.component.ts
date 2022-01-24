@@ -101,11 +101,12 @@ export class InicioComponent implements OnInit {
       this.bosqueService.list().subscribe(async bosques => {
         for (let bosque of bosques["data"]) {
           //await this.fetchLikes(bosque);
-          this.locatebosque(bosque);
+          //this.locatebosque(bosque);
           this.bosqueService.like(bosque.id).subscribe(async like=>{
             if (like["data"][0]["cantidad"]>50){
               this.bosquesPopular.push({nombre: bosque.nombre, url: bosque.img_url, id: bosque.id})
             }
+            this.locatebosque(bosque,like["data"][0]["cantidad"]);
             //console.log(like["data"][0]["cantidad"])
           });
         }
@@ -115,8 +116,8 @@ export class InicioComponent implements OnInit {
     });
   }
 
-  private locatebosque(bosque: Bosque): void {
-    let datos = {nombre: bosque.nombre, url: bosque.img_url, id: bosque.id};
+  private locatebosque(bosque: Bosque,cantidad:number): void {
+    let datos = {nombre: bosque.nombre, url: bosque.img_url, id: bosque.id, likes:cantidad};
     if(bosque.zona.toLocaleLowerCase() === "norte"){
       this.bosquesNorte.push(datos);
     }else if(bosque.zona.toLocaleLowerCase() === "centro"){

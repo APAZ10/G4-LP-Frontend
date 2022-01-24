@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Bosque } from 'app/interfaces/bosques';
+import { BosquesService } from 'app/services/bosques/bosques.service';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,7 @@ export class HeaderComponent implements OnInit {
   @Input()
   bosque: Bosque;
 
-  constructor() { }
+  constructor(private bosqueService: BosquesService) { }
 
   ngOnInit(): void {
     /*
@@ -32,6 +33,16 @@ export class HeaderComponent implements OnInit {
       })
       .catch(console.error);
     */
+  }
+
+  like(bosque: Bosque){
+    console.log("estoy aqui")
+    console.log(bosque)
+    this.bosqueService.addLike(bosque.id,bosque.likes+1).subscribe(data =>{
+      //console.log(data)
+      location.reload()
+    })
+    
   }
 
 }
