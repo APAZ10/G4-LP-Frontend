@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EspeciesService } from 'app/services/especies/especies.service';
+import { RecorridosService } from 'app/services/recorridos/recorridos.service';
 
 @Component({
   selector: 'app-gallery',
@@ -9,16 +10,19 @@ import { EspeciesService } from 'app/services/especies/especies.service';
 export class GalleryComponent implements OnInit {
 
   especies: any = []
+  recorridos: any = []
 
-  constructor(private grupoServicio: EspeciesService) { }
+  constructor(private grupoServicio: EspeciesService, private recorridoServicio: RecorridosService ) { }
 
   ngOnInit(): void {
     new Promise<void>((resolve, reject) => {
-      this.grupoServicio.list().subscribe(async especies =>{
-        
+      this.grupoServicio.list(window.location.pathname.split("/").pop()).subscribe(async especies =>{   
         this.especies = especies["data"];
-        resolve();
       });
+      this.recorridoServicio.list(window.location.pathname.split("/").pop()).subscribe(async recorridos =>{
+        this.recorridos = recorridos["data"];
+      });
+      resolve();
     });
   }
 }

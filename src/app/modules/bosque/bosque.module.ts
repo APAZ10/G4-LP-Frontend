@@ -5,6 +5,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MapComponent } from './components/map/map.component';
 import { BosqueComponent } from './bosque.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { BosqueComponent } from './bosque.component';
   ],
   imports: [
     CommonModule,
-    NgbModule
+    NgbModule,
+    MatCardModule
   ]
 })
 export class BosqueModule { }

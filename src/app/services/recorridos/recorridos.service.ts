@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
       private http: HttpClient
     ) { }
   
-    list(): Observable<any[]> {
-      return this.http.get<any[]>(`${environment.datababe_url}/recorrido`);
+    list(id): Observable<any[]> {
+      return this.http.get<any[]>(`${environment.datababe_url}/recorrido/${id}`);
     }
   }

@@ -1,3 +1,10 @@
+<div id="contenedor-recorridos">
+
+    <div *ngFor="let recorrido of recorridos">
+        <mat-card>{{recorrido.descripcion}}</mat-card>
+    </div>
+
+</div>
 <ngb-carousel id="especies">
     <ng-template *ngFor="let especie of especies" ngbSlide>
             <img class="d-block" src="{{especie.img_url}}" alt="">
